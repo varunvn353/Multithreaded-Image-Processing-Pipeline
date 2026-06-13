@@ -18,9 +18,9 @@ Output          (annotated visualization)
 
 ## Skills Demonstrated
 
-- **C++ / OOP** — `Stage` base class with specialized stage implementations
-- **Multithreading** — producer-consumer pipeline with `std::thread` and thread-safe queues
-- **Performance** — FPS measurement, per-stage profiling, single vs multi-thread comparison
+- **C++ / OOP** - `Stage` base class with specialized stage implementations
+- **Multithreading** - producer-consumer pipeline with `std::thread` and thread-safe queues
+- **Performance** - FPS measurement, per-stage profiling, single vs multi-thread comparison
 
 ## Requirements
 
@@ -103,10 +103,10 @@ Each frame passes through all stages sequentially on one thread. Per-stage and p
 
 Four worker threads form an assembly-line pipeline:
 
-1. **Preprocess thread** — reads input queue, writes preprocessed frames
-2. **Edge thread** — runs Canny on preprocessed frames
-3. **Object thread** — finds contours and draws bounding boxes
-4. **Output thread** — collects final frames
+1. **Preprocess thread** - reads input queue, writes preprocessed frames
+2. **Edge thread** - runs Canny on preprocessed frames
+3. **Object thread** - finds contours and draws bounding boxes
+4. **Output thread** - collects final frames
 
 Stages overlap across frames, improving throughput on multi-core CPUs.
 
